@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Mapping</title>
+
+    <!-- Jquery and Bootstrap Imports -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Mapping imports -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+    <!-- Internal imports -->
+    <link href="/assets/css/app.css" rel="stylesheet">
+
+</head>
+<body>
+<h1>Data Mapping Tool</h1>
+
+<!-- FIRST PAGE - File Input area -->
+<div class="file-input">
+    <input type="file" id="files" name="files[]" accept=".csv" />
+</div>
+
+<hr/>
+
+<!-- SECOND PAGE Data Mapping -->
+<div class="dataMappingPage hidden">
+<a id="mapItBtn" class="btn btn-primary">Map Results</a>
+<br/><br/>
+    <table id="list" class='table table-striped'>
+        <tr>
+            <th>Column 1 <br/> Map to
+                <select id="col1" class="mappingValue">
+                    <option value="">Choose Mapping</option>
+                    <option value="address">Address</option>
+                    <option value="city">City</option>
+                    <option value="state">State</option>
+                    <option value="zip">Zip</option>
+                    <option value="category">Category</option>
+                </select>
+            </th>
+            <th>Column 2 <br/> Map to
+                <select id="col2" class="mappingValue">
+                    <option value="">Choose Mapping</option>
+                    <option value="address">Address</option>
+                    <option value="city">City</option>
+                    <option value="state">State</option>
+                    <option value="zip">Zip</option>
+                    <option value="category">Category</option>
+                </select>
+            </th><th>Column 3 <br/> Map to
+            <select id="col3" class="mappingValue">
+                <option value="">Choose Mapping</option>
+                <option value="address">Address</option>
+                <option value="city">City</option>
+                <option value="state">State</option>
+                <option value="zip">Zip</option>
+                <option value="category">Category</option>
+            </select>
+        </th><th>Column 4 <br/> Map to
+            <select id="col4" class="mappingValue">
+                <option value="">Choose Mapping</option>
+                <option value="address">Address</option>
+                <option value="city">City</option>
+                <option value="state">State</option>
+                <option value="zip">Zip</option>
+                <option value="category">Category</option>
+            </select>
+        </th><th>Column 5 <br/> Map to
+            <select id="col5" class="mappingValue">
+                <option value="">Choose Mapping</option>
+                <option value="address">Address</option>
+                <option value="city">City</option>
+                <option value="state">State</option>
+                <option value="zip">Zip</option>
+                <option value="category">Category</option>
+            </select>
+        </th>
+        </tr>
+    </table>
+</div>
+
+<div class="mapPage hidden">
+    <!-- THIRD PAGE - Data Mapping -->
+    <h2>My Map</h2>
+    <div id="mapArea"></div>
+</div>
+
+<!--JS imports-->
+<script src="/assets/js/app.js"></script>
+</body>
+</html>

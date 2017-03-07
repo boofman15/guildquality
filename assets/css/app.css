@@ -1,0 +1,11 @@
+.hidden {
+    display: none;
+}
+
+body {
+    margin: 40px;
+}
+
+#mapArea {
+ height: 500px;
+}
